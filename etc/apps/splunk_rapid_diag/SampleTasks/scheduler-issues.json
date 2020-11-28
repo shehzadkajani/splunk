@@ -1,0 +1,22 @@
+{
+  "__class__": "rapid_diag.task.Task",
+  "collectors": [
+    {
+      "__class__": "rapid_diag.collector.search_result.SearchResult",
+      "search_query": "| rest /servicesNS/<user>/<app>/saved/searches/<saved search name>/history",
+      "action_needed": "Please change <user>, <app>, and <saved search name> to reflect a search that is struggling"
+    },
+    {
+      "__class__": "rapid_diag.collector.search_result.SearchResult",
+      "search_query": "| rest /servicesNS/<user>/<app>/saved/searches/<saved search name>/history",
+      "action_needed": "Please change <user>, <app>, and <saved search name> to reflect a search that is working fine"
+    },
+    {
+      "__class__": "rapid_diag.collector.diag.Diag"
+    }
+  ],
+  "name": "Scheduler issues",
+  "description": "This template is used to evaluate the search scheduler. The collector compares and records the scheduler behavior for a pair of defined searches. The template must be run on a search head, or the captain in a search head cluster. The template requires two saved search names to compare.",
+  "host": "",
+  "task_id": "scheduler-issues"
+}

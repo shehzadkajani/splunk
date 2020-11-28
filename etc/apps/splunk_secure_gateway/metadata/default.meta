@@ -1,0 +1,50 @@
+[]
+access = read : [ * ], write : [securegateway]
+
+[alert_actions/ssg_mobile_alert]
+export = system
+
+[alerts]
+export = system
+
+[restmap]
+export = system
+
+[props]
+export = system
+
+[views/secure_gateway_status_dashboard]
+access = read : [ admin, sc_admin ], write : [ admin, sc_admin ]
+export = system
+
+[views/configure]
+access = read : [ admin, sc_admin ], write : [ admin, sc_admin ]
+
+[views/app_selection]
+access = read : [ admin, sc_admin ], write : [ admin, sc_admin ]
+
+[collections/searches]
+access = read : [ * ], write : [ * ]
+
+[collections/subscriptions]
+access = read : [ * ], write : [ * ]
+
+[commands/checkssgmobilehttps]
+access = read : [ securegateway ], write : [ securegateway ]
+export = system
+owner = nobody
+
+[commands/checkssgmobilewss]
+access = read : [ securegateway ], write : [ securegateway ]
+export = system
+owner = nobody
+
+[commands/checkssgmobileasync]
+access = read : [ securegateway ], write : [ securegateway ]
+export = system
+owner = nobody
+
+[commands/ssgpstree]
+access = read : [ securegateway ], write : [ securegateway ]
+export = system
+owner = nobody

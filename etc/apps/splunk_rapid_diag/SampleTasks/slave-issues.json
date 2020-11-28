@@ -1,0 +1,40 @@
+{
+  "__class__": "rapid_diag.task.Task",
+  "collectors": [
+    {
+      "__class__": "rapid_diag.collector.trigger.periodic.Periodic",
+      "collectors": [
+        {
+          "__class__": "rapid_diag.collector.stack_trace.StackTrace",
+          "process": {
+            "__class__": "rapid_diag.process_abstraction.Process",
+            "pid": 0,
+            "name": "splunkd",
+            "args": "splunkd",
+            "process_type": "splunkd server",
+            "ppid": 0
+          }
+        }
+      ],
+      "sampleCount": 1000,
+      "interval": 0.5
+    },
+    {
+      "__class__": "rapid_diag.collector.trigger.periodic.Periodic",
+      "collectors": [
+        {
+          "__class__": "rapid_diag.collector.netstat.NetStat"
+        }
+      ],
+      "sampleCount": 600,
+      "interval": 1.0
+    },
+    {
+      "__class__": "rapid_diag.collector.diag.Diag"
+    }
+  ],
+  "name": "Slave issues",
+  "description": "This template will gather pstack, netstat along with diags to help with issues related to slave state ",
+  "host": "",
+  "task_id": "slave-issues"
+}

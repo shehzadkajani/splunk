@@ -1,0 +1,22 @@
+{
+  "__class__": "rapid_diag.task.Task",
+  "collectors": [
+    {
+      "__class__": "rapid_diag.collector.trigger.periodic.Periodic", 
+      "collectors": [
+        {
+          "__class__": "rapid_diag.collector.ps.PS"
+        }
+      ],
+      "sampleCount": 60, 
+      "interval": 1.0
+    },
+    {
+      "__class__": "rapid_diag.collector.diag.Diag"
+    }
+  ],
+  "name": "Workload management issues",
+  "description": "Collects the data that is necessary to troubleshoot any issues with workload management.",
+  "host": "",
+  "task_id": "wlm-issues"
+}
