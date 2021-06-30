@@ -1,4 +1,0 @@
-
-class ParentNotRunningException(Exception):
-    pass
-

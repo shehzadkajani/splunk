@@ -1,2 +1,0 @@
-from spacebridgeapp.versioning.client_minimum import minimum_build, is_version_ok
-from spacebridgeapp.versioning.package_version import app_version
