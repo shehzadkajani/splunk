@@ -1,0 +1,5 @@
+<endpoint name="splunk_rapid_diag/task_template_wizard" template="pages/system.html" showOnSearchHeadCluster="1">
+    <capabilities>
+        <read>get_diag</read>
+    </capabilities>
+</endpoint>

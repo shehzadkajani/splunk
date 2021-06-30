@@ -1,0 +1,31 @@
+{
+  "__class__": "rapid_diag.task.Task",
+    "collectors": [
+        {
+            "__class__": "rapid_diag.collector.trigger.periodic.Periodic", 
+            "collectors": [
+                {
+                    "__class__": "rapid_diag.collector.stack_trace.StackTrace", 
+                    "process": {
+                        "__class__": "rapid_diag.process_abstraction.Process", 
+                        "pid": 0, 
+                        "name": "splunkd", 
+                        "args": "splunkd", 
+                        "process_type": "splunkd server", 
+                        "ppid": 0
+                    },
+                    "action_needed": "Please ensure that the correct target process has been specified (default is the main Splunk process)"
+                }
+            ], 
+            "sampleCount": 1000, 
+            "interval": 0.5
+        },
+        {
+            "__class__": "rapid_diag.collector.diag.Diag"
+        }
+    ],
+  "name": "Collect process stacks + diag",
+  "description": "This template is used to investigate issues related to excessive CPU or time used by a process. The stack trace collector monitors a process and generates a series of process stacks on the host it is running on. The template requires a target process type or process id.",
+  "host": "",
+  "task_id": "pstacks-main"
+}

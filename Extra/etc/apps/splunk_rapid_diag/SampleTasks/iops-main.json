@@ -1,0 +1,16 @@
+{
+  "__class__": "rapid_diag.task.Task",
+  "collectors": [
+        {
+            "collection_time": 600, 
+            "__class__": "rapid_diag.collector.iops.IOPS"
+        }, 
+        {
+            "__class__": "rapid_diag.collector.diag.Diag"
+        }
+    ],
+  "name": "Collect IOPS + diag",
+  "description": "This template is used to investigate issues related to poor storage performance. The IOPS collector monitors and logs input/output operations per second on the host it is running on.",
+  "host": "",
+  "task_id": "iops-main"
+}
