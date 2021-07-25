@@ -1,7 +1,3 @@
 newfile from UI
-<<<<<<< HEAD
-
 changing from vm
-=======
 changing it from UI
->>>>>>> 905e7a5561bb803d0ba39a865e2d64aaa8d42128
